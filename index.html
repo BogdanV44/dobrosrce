@@ -8,7 +8,7 @@
         <meta name="author" content="">
 
         <title>Udruženje Dobrog Srca</title>
-        <link rel="icon" type="image/x-icon" href="images/logo.png">
+        <link rel="icon" type="image/x-icon" href="/images/logo.png">
 
         <!-- CSS FILES -->        
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -17,7 +17,7 @@
 
         <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet" type="text/css" />
 
-        <link href="css/global.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
 <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -92,23 +92,6 @@ https://templatemo.com/tm-581-kind-heart-charity
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#top">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">O Nama</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Ciljevi</a>
-                        </li>
-
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn" href="#section_4">Volontiraj</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>
@@ -178,46 +161,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <h2 class="mb-5">Dobrodošli u Udruženje Dobrog Srca</h2>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div class="featured-block d-flex justify-content-center align-items-center">
-                                <div class="d-block">
-                                    <img src="images/icons/hands.png" class="featured-block-image img-fluid" alt="">
-
-                                    <p class="featured-block-text">Postani <strong>volonter</strong></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                            <div class="featured-block d-flex justify-content-center align-items-center">
-                                <div class="d-block">
-                                    <img src="images/icons/heart.png" class="featured-block-image img-fluid" alt="">
-
-                                    <p class="featured-block-text"><strong>Čuvajmo</strong> Zemlju</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                            <div class="featured-block d-flex justify-content-center align-items-center">
-                                <div class="d-block">
-                                    <img src="images/icons/receive.png" class="featured-block-image img-fluid" alt="">
-
-                                    <p class="featured-block-text">Širite <strong>Ljubav</strong></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div class="featured-block d-flex justify-content-center align-items-center">
-                                <div class="d-block">
-                                    <img src="images/icons/scholarship.png" class="featured-block-image img-fluid" alt="">
-
-                                    <p class="featured-block-text"><strong>Besplatna</strong> Edukacija</p>
-                                </div>
-                            </div>
-                        </div>
-
+                        <div class="row" id="poljeDobrodosli"></div>
                     </div>
                 </div>
             </section>
@@ -454,28 +398,27 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="col-lg-6 col-12">
                             <h2 class="text-white mb-4">Volontiraj</h2>
 
-                            <div class="col-12">
-                                <form action="">
+                            <div class="col-12" id="kontaktForma">
+                                <h3>Postani volonter danas</h3>
+                                <form action="" class="mt-4">
                                     <div class="row">
                                         <div class="form-group col-lg-6 col-12">
-                                            <label for="">Ime i prezime</label>
-                                            <input type="text" id="tbImePrezime" class="form-control" />
-                                            <p class="alert alert-danger ispisGresaka">Ime i Prezime mora sadržati minimum 4 karaktera.</p>
+                                            <input type="text" id="tbImePrezime" class="form-control" placeholder="Ime i prezime" />
+                                            <p class="alert alert-danger ispisGresaka">Upišite puno ime i prezime (Minimum 4 karaktera).</p>
                                         </div>
 
                                         <div class="form-group col-lg-6 col-12">
-                                            <label for="">Email</label>
-                                            <input type="text" id="tbEmail" class="form-control" />
+                                            <input type="text" id="tbEmail" class="form-control" placeholder="E-mail"/>
                                             <p class="alert alert-danger ispisGresaka">E-mail mora sadržati @ karakter.</p>
                                         </div>
                                     </div>
                                     
                                     <div>
-                                        <div class="form-group col-12" id="ddLista"></div>
+                                        <div class="form-group col-12 mt-4" id="ddLista"></div>
                                         <p class="alert alert-danger ispisGresaka">Morate izabrati jednu od opcija</p>
                                     </div>
                                     
-                                    <div class="form-group col-12" id="divKomentar">
+                                    <div class="form-group col-12 mt-4" id="divKomentar">
                                         <textarea id="poljeKomentar" rows="4" class="form-control" placeholder="Komentar (opciono)"></textarea>
                                         <p>Broj slobodnih karaktera: <span id="brojKaraktera">200</span></p>
                                         <p class="alert alert-danger ispisGresaka">Postignut maksimalni broj karaktera.</p>
@@ -486,23 +429,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         <input type="button" value="Prijavi se" id="dugmePosalji_id" class="btn btn-primary">
                                     </div>
                                 </form>
-
                                 <div id="ispisProvere"></div>
                             </div>
-
-                            <!--
-                            <div class="col-12" id="ddLista">
-                                <form action="">
-                                    <div class="form-group" id="ddLista">
-
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="button" value="dugmePosalji" id="dugmePosalji_id" class="btn btn-primary">
-                                    </div>
-                                </form>
-                            </div>
-                            -->
-
                         </div>
 
                         <div class="col-lg-6 col-12">
@@ -532,7 +460,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                            <div class="carousel-caption">
-                                                <h4 class="carousel-title">Toplo bih preporučila Udruženje Dobrog Srca svim dobrotvornim organizacijama!</h4>
+                                                <h4 class="carousel-title">Toplo bih preporučila Udruženje Dobrog Srca svim organizacijama!</h4>
 
                                                 <small class="carousel-name"><span class="carousel-name-title">Marija</span>, Šef</small>
                                            </div>
@@ -548,7 +476,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                         <div class="carousel-item">
                                             <div class="carousel-caption">
-                                                <h4 class="carousel-title">Član sam već 2 godine, od kako sam čula za ovo Udruženje. Uvek je lepo videti osmeh na licu dece!</h4>
+                                                <h4 class="carousel-title">Član sam već 2 godine. Uvek je lep osećaj pomagati drugima kroz razne aktivnosti!</h4>
 
                                                 <small class="carousel-name"><span class="carousel-name-title">Jana</span>, Član</small>
                                             </div>
@@ -556,7 +484,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                         <div class="carousel-item">
                                             <div class="carousel-caption">
-                                                <h4 class="carousel-title">Udruženje Dobrog Srca je bilo od velike pomoći i podrške za prvu fazu projekta seoske vode.</h4>
+                                                <h4 class="carousel-title">Udruženje Dobrog Srca je bilo od velike pomoći za prvu fazu projekta seoske vode.</h4>
 
                                                 <small class="carousel-name"><span class="carousel-name-title">Saša</span>, Partner</small>
                                            </div>
@@ -609,6 +537,10 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link">Postani volonter</a></li>
 
                             <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link">Postanite naš partner</a></li>
+
+                            <li class="footer-menu-item"><a href="assets/DOKUMENTACIJA_fajl.pdf" class="footer-menu-link fw-bolder">Dokumentacija</a></li>
+
+                            <li class="footer-menu-item"><a href="xml/sitemap.xml" class="footer-menu-link fw-bolder">Sitemap</a></li>
                         </ul>
                     </div>
 
@@ -636,7 +568,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             Tomaša Ježa 5, Beograd 11000, Srbija
                         </p>
 
-                        <a href="https://maps.google.com/" target="_blank" class="custom-btn btn mt-3">Pronađite na mapi</a>
+                        <a href="https://goo.gl/maps/BfLJxE8SRJW1mrz1A" target="_blank" class="custom-btn btn mt-3">Pronađite na mapi</a>
                     </div>
                 </div>
             </div>
