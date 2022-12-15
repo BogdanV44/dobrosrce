@@ -1,0 +1,77 @@
+.navbar-expand-lg .navbar-nav .nav-link.custom-btn {
+    margin-top: 0px;
+}
+#dugmeSpecijalno {
+    margin-top: 10px;
+}
+.borderPlavi {
+    border-style: solid;
+    border-width: 0px 0px 50px 0px;
+    border-color: var(--secondary-color);
+}
+.custom-block-wrap:hover {
+    border-color: var(--primary-color);
+}
+.responsivneMargine {
+    margin: auto;
+}
+
+.ispisGresaka {
+    display: none;
+}
+
+.prikazGreske {
+    display: block;
+}
+
+#divKomentar p {
+        color: white
+}
+.border-danger {
+    border-width: 2.7px;
+}
+#kontaktForma {
+    background-color: var(--white-color);
+    padding: 50px;
+    border-radius: var(--border-radius-medium);
+}
+#kontaktForma .form-control {
+    padding: 12px;
+    background-color: var(--section-bg-color);
+    color: var(--p-color);
+    border: 0;
+}
+#dugmePosalji_id {
+    background: var(--custom-btn-bg-color);
+    border: 0;
+    border-radius: var(--border-radius-large);
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px;
+}
+#dugmePosalji_id:hover{
+    background-color: var(--primary-color);
+    transition: 300ms;
+}
+#divKomentar p {
+    color: var(--p-color);
+}
+#site-footer-bottom .row:first-child{
+    display: flex;
+    align-items: center;
+}
+.fadeinLeft {
+    opacity: 0;
+    margin-left: -300px;
+    max-width: 100%;
+}
+@media screen and (max-width: 991px){
+    #navbarNav ul li {
+        display: flex;
+        justify-content: center;
+    }
+    #dugmeSpecijalno {
+        margin-top: 0;
+    }
+}
