@@ -141,6 +141,7 @@ var contentONama = `<div class="container">
                             <div class="d-flex">
                                 <span class="counter-number" data-from="1" data-to="2009" data-speed="1000"></span>
                                 <span class="counter-number-text"></span>
+                                <div id="counter"></div>
                             </div>
 
                             <span class="counter-text">Osnovano</span>
@@ -246,8 +247,6 @@ $(document).ready(function() {
     $(".rslides").responsiveSlides();
 });
 
-//
-
 // FORMA
 // Dinamicka ispisivanje padajuce liste forme
 var nizSlobodanSam = new Array("Slobodan sam samo vikendom", "Slobodan sam svaki dan");
@@ -342,6 +341,24 @@ function proveriPolje(){
         objSlobodnoVreme.parentElement.parentElement.lastElementChild.classList.remove("prikazGreske");
     }
 
+    // provera radio button-a
+    var objNewsletter = document.getElementsByName("rbNewsletter");
+    let poslednjiP_element = document.querySelector("#poslednjiP");
+
+    var vrednostNewsletter = "";
+    for(let i = 0; i < objNewsletter.length; i++){
+        if(objNewsletter[i].checked){
+            vrednostNewsletter = objNewsletter[i].value;
+            break;
+        }
+    }
+    if(vrednostNewsletter == ""){
+        poslednjiP_element.classList.add("prikazGreske");
+        brojacGresaka++;
+    }
+    else {
+        poslednjiP_element.classList.remove("prikazGreske");
+    }
 
     if (brojacGresaka == 0) {
         document.querySelector("#ispisProvere").innerHTML = "Hvala Vam što ste Dobro Srce. Naš tim će Vas uskoro kontaktirati!"
@@ -349,6 +366,5 @@ function proveriPolje(){
     else {
         document.querySelector("#ispisProvere").innerHTML = "";
     }
-
 }
     
