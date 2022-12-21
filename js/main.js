@@ -24,10 +24,13 @@ ispisNav += '</ul>';
 divNavigacija.innerHTML = ispisNav;
 
 // Sekcije Pocetna
+let nizPocetnaImg = ["images/slide/volunteer-helping-with-donation-box.jpg","images/slide/volunteer-selecting-organizing-clothes-donations-charity.jpg",
+"images/slide/medium-shot-people-collecting-donations.jpg"]
+let nizPocetnaAlt = ["donationbox", "volonter_donira", "prikupljanje_donacija"]
 var sekcijaPocetna = document.querySelector("#hero-slide");
 var contentPocetna = `<div class="carousel-inner">
 <div class="carousel-item active">
-    <img src="images/slide/volunteer-helping-with-donation-box.jpg" class="carousel-image img-fluid" alt="...">
+    <img src="${nizPocetnaImg[0]}" class="carousel-image img-fluid" alt="${nizPocetnaAlt[0]}">
     
     <div class="carousel-caption d-flex flex-column justify-content-end">
         <h1>budi Dobro Srce</h1>
@@ -37,7 +40,7 @@ var contentPocetna = `<div class="carousel-inner">
 </div>
 
 <div class="carousel-item">
-    <img src="images/slide/volunteer-selecting-organizing-clothes-donations-charity.jpg" class="carousel-image img-fluid" alt="...">
+    <img src="${nizPocetnaImg[1]}" class="carousel-image img-fluid" alt="${nizPocetnaAlt[1]}">
     
     <div class="carousel-caption d-flex flex-column justify-content-end">
         <h1>Neprofitabilno</h1>
@@ -47,7 +50,7 @@ var contentPocetna = `<div class="carousel-inner">
 </div>
 
 <div class="carousel-item">
-    <img src="images/slide/medium-shot-people-collecting-donations.jpg" class="carousel-image img-fluid" alt="...">
+    <img src="${nizPocetnaImg[2]}" class="carousel-image img-fluid" alt="${nizPocetnaAlt[2]}">
     
     <div class="carousel-caption d-flex flex-column justify-content-end">
         <h1>Humanost</h1>
@@ -96,6 +99,10 @@ for(let i=0; i < nizIkonice.length; i++){
 }
 
 // Sekcije O Nama
+let nizOnamaNaslovi = ["Naša priča", "Naša Misija"]
+let nizOnamaTekst = ["Udruženje Dobrog Srca, Neprofitabilno Udruženje",
+"Počeli smo kao mala grupa, tokom godina sve više i više ljudi se saoseća sa našom misijom.<br/><br/>Savez je organizovan na teritorijalnom principu i u njegovom sastavu deluje 45 opštinske, međuopštinske i gradske organizacije, od kojih 29 u centralnoj Srbiji, 3 na Kosovu i Metohiji i 13 u Vojvodini. Osim toga, u okviru republičke organizacije deluje i Savez slepih Vojvodine.",
+"Pomoći svim nezbrinutim članovima našeg društva kroz:"]
 var sekcijaONama = document.querySelector("#section_2");
 var contentONama = `<div class="container">
     <div class="row">
@@ -106,20 +113,19 @@ var contentONama = `<div class="container">
 
         <div class="col-lg-6 col-12">
             <div class="custom-text-box">
-                <h2 class="mb-2">Naša priča</h2>
+                <h2 class="mb-2">${nizOnamaNaslovi[0]}</h2>
 
-                <h5 class="mb-3">Udruženje Dobrog Srca, Neprofitabilno Udruženje</h5>
+                <h5 class="mb-3">${nizOnamaTekst[0]}</h5>
 
-                <p class="mb-0">Počeli smo kao mala grupa, tokom godina sve više i više ljudi se saoseća sa našom misijom.<br/><br/>
-                    Savez je organizovan na teritorijalnom principu i u njegovom sastavu deluje 45 opštinske, međuopštinske i gradske organizacije, od kojih 29 u centralnoj Srbiji, 3 na Kosovu i Metohiji i 13 u Vojvodini. Osim toga, u okviru republičke organizacije deluje i Savez slepih Vojvodine. </p>
+                <p class="mb-0">${nizOnamaTekst[1]}</p>
             </div>
             
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="custom-text-box mb-lg-0">
-                        <h5 class="mb-3">Naša Misija</h5>
+                        <h5 class="mb-3">${nizOnamaNaslovi[1]}</h5>
 
-                        <p>Pomoći svim nezbrinutim članovima našeg društva kroz:</p>
+                        <p>${nizOnamaTekst[2]}</p>
 
                         <ul class="custom-list mt-2">
                             <li class="custom-list-item d-flex">
@@ -165,6 +171,8 @@ sekcijaONama.innerHTML = contentONama;
 
 // Sekcije Co Founder
 
+let ispisIkoniceHref = ["https://twitter.com/", "https://www.facebook.com/", "https://www.instagram.com/"];
+let ispisIkoniceKlasa = ["social-icon-link bi-twitter", "social-icon-link bi-facebook", "social-icon-link bi-instagram"];
 var sekcijaCoFounder = document.querySelector("#coFounder");
 var contentCoFounder = `<div class="container">
     <div class="row">
@@ -185,15 +193,15 @@ var contentCoFounder = `<div class="container">
 
                 <ul class="social-icon mt-4">
                     <li class="social-icon-item">
-                        <a href="https://twitter.com/" class="social-icon-link bi-twitter"></a>
+                        <a href="${ispisIkoniceHref[0]}" class="${ispisIkoniceKlasa[0]}"></a>
                     </li>
 
                     <li class="social-icon-item">
-                        <a href="https://www.facebook.com/" class="social-icon-link bi-facebook"></a>
+                        <a href="${ispisIkoniceHref[1]}" class="${ispisIkoniceKlasa[1]}"></a>
                     </li>
 
                     <li class="social-icon-item">
-                        <a href="https://www.instagram.com/" class="social-icon-link bi-instagram"></a>
+                        <a href="${ispisIkoniceHref[2]}" class="${ispisIkoniceKlasa[2]}"></a>
                     </li>
                 </ul>
             </div> 
@@ -202,14 +210,63 @@ var contentCoFounder = `<div class="container">
     </div>`;
 sekcijaCoFounder.innerHTML = contentCoFounder;
 
+// Sekcija Nasi Ciljevi
+let nizCiljeviSlike = ["images/causes/group-african-kids-paying-attention-class.jpg",
+    "images/causes/poor-child-landfill-looks-forward-with-hope.jpg",
+    "images/causes/african-woman-pouring-water-recipient-outdoors.jpg"];
+
+let nizCiljeviNaslov = ["Edukovanje Dece", "Pomoć Siromašnima", "Obezbeđivanje pijuće vode"];
+
+let nizCiljeviOpis = ["Organizovane edukacije za siromašnu decu, u sredine u kojoj će se osećati bezbedno.",
+    "Nabavka stvari neophodnih za život. Kupovina svezaka, pribora i knjiga za mališane.",
+    "Obezbeđujemo siromašnim naseljima bezbednu vodu."];
+
+let nizCiljeviSakupljeno = ["150.000din", "230.000din", "350.000din"];
+let nizCiljeviCilj = ["200.000din", "560.000din", "350.000din"];
+let nizCiljeviProgress = ["75", "50", "100"];
+
+for (let i = 0; i < nizCiljeviNaslov.length; i++ ){
+    var sekcijaCiljevi = document.querySelector("#sekcijaCiljevi");
+    sekcijaCiljevi.innerHTML += `<div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mx-auto">
+        <div class="borderPlavi custom-block-wrap">
+            <img src="${nizCiljeviSlike[i]}" class="custom-block-image img-fluid" alt="cilj${i}">
+
+            <div class="custom-block">
+                <div class="custom-block-body">
+                    <h5 class="mb-3">${nizCiljeviNaslov[i]}</h5>
+
+                    <p>${nizCiljeviOpis[i]}</p>
+
+                    <div class="progress mt-4">
+                        <div class="progress-bar w-${nizCiljeviProgress[i]}" role="progressbar" aria-valuenow="${nizCiljeviProgress[i]}" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <div class="d-flex align-items-center my-2">
+                        <p class="mb-0">
+                            <strong>Skupljeno:</strong>
+                            ${nizCiljeviSakupljeno[i]}
+                        </p>
+
+                        <p class="ms-auto mb-0">
+                            <strong>Cilj:</strong>
+                            ${nizCiljeviCilj[i]}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`;
+}
+
 // Sekcija CallToAction
+let nizCTATekst = ["Napravi razliku. <br> Sačuvaj živote.", "Postani volonter"];
 var sekcijaCTA = document.querySelector("#cta");
-var contentCTA = `<div class="col-lg-5 col-12 ms-auto">
-    <h2 class="mb-0 mx-auto">Napravi razliku. <br> Sačuvaj živote.</h2>
+var contentCTA = `<div class="col-lg-5 col-12 mx-auto d-flex">
+    <h2 class="mb-0 mx-auto">${nizCTATekst[0]}</h2>
     </div>
 
-    <div class="col-lg-5 col-12">
-    <a href="#section_4" class="custom-btn btn smoothscroll mx-auto">Postani volonter</a>
+    <div class="col-lg-5 col-12 d-flex">
+        <a href="#section_4" class="custom-btn btn smoothscroll mx-auto">${nizCTATekst[1]}</a>
     </div>`;
 sekcijaCTA.innerHTML = contentCTA;
 
@@ -244,11 +301,11 @@ else {
 
 // Slajder testemonijala
 $(document).ready(function() {
-    $(".rslides").responsiveSlides();
+    $(".rslides").responsiveSlides;
 });
 
 // FORMA
-// Dinamicka ispisivanje padajuce liste forme
+// Dinamicko ispisivanje padajuce liste forme
 var nizSlobodanSam = new Array("Slobodan sam samo vikendom", "Slobodan sam svaki dan");
 var nizVrednostSlobodanSam = new Array("SV", "SS");
 
