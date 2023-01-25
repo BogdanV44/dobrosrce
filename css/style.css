@@ -67,6 +67,48 @@
     display: flex;
     align-items: center;
 }
+#autor-navButton {
+    padding: 10px 15px;
+    font-size: 18px;
+    border: 2px solid;
+    border-radius: var(--border-radius-large);
+
+}
+#autor-navButton:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color:white;
+}
+#autor {
+    background-color: var(--section-bg-color);
+    padding: 60px;
+}
+#autor-testemonijali {
+    box-shadow: 0px 0px 15px 0.1px var(--secondary-color);
+}
+#autor .container {
+    min-height: 75vh;
+}
+#autor img {
+    width: 40%;
+    border: 20px solid;
+    border-radius: 50%;
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    margin: 0px auto;
+}
+#autor-tekst {
+    padding: 20px 0px;
+}
+#autor-lista {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0px;
+}
+#autor-lista li {
+    font-size: 24px;
+    color: black;
+}
 .fadeinLeft {
     opacity: 0;
     margin-left: -300px;
