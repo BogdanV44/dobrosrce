@@ -1,8 +1,9 @@
 
+// !-Validacija forme-!
+
 window.onload = function(){
     document.querySelector("#dugmePosalji_id").addEventListener("click", proveriPolje);
 }
-// !-Validacija forme-!
 function proveriPolje(){
     var poljeImePrezime = document.querySelector("#tbImePrezime");
 
@@ -30,7 +31,6 @@ function proveriPolje(){
     }
 
     var objSlobodnoVreme = document.querySelector("#listaSlobodanSam");
-    console.log("proba");
 
     var brojacGresaka = 0;
 
@@ -69,8 +69,6 @@ function proveriPolje(){
         document.querySelector("#ispisProvere").innerHTML = "";
     }
 }
-
-
 // DINAMICKI ISPIS
 // Dinamicko ispisivanje nav
 let nizHref = ["#top", "#section_2", "#section_3", "#section_4", "author.html"];
@@ -319,6 +317,63 @@ for (let i = 0; i < nizCiljeviNaslov.length; i++ ){
     </div>`;
 }
 
+// Galerija
+var button = document.querySelector("#vidi-jos");
+const putanjaGalerija = "images/gallery/img";
+for (let i = 1; i < 4; i++) {
+    kreirajElementeGalerije(i);
+}
+
+button.addEventListener("click", ucitajGaleriju);
+
+var vecProsiren = 0;
+var vecUcitaneSlike = 0; //da se nebi pravili novi HTTP requestovi
+function ucitajGaleriju() {
+    if (vecProsiren != 1 && vecUcitaneSlike != 1) {
+        for (let i = 4; i < 10; i++) {
+            kreirajElementeGalerije(i);
+
+            vecProsiren = 1;
+            vecUcitaneSlike = 1;
+            button.textContent = "Umanji";
+        }
+    }
+    else if (vecUcitaneSlike == 1 && vecProsiren == 0) {
+        var nizUcitanihSlika = document.querySelectorAll(".gallery-item");
+        nizUcitanihSlika.forEach(function (slika) {
+            slika.classList.remove("d-none");
+            slika.classList.add("col");
+        })
+        
+        vecProsiren = 1;
+        button.textContent = "Umanji";
+    }
+    else {
+        var nizUcitanihSlika = document.querySelectorAll(".gallery-item");
+        // Da bi prve tri ostale vidljive
+        for (let i = 3; i < nizUcitanihSlika.length; i++ ) {
+            nizUcitanihSlika[i].classList.add("d-none");
+            nizUcitanihSlika[i].parentElement.style.margin = "0";
+        }
+
+        vecProsiren = 0;
+        button.textContent = "Učitaj Još";
+    }
+}
+
+function kreirajElementeGalerije(i) {
+    var div_slike = document.createElement("div");
+    div_slike.classList.add("col");
+
+    var img = document.createElement("img");
+    img.setAttribute("src", `${putanjaGalerija+i}.jpg`);
+    img.setAttribute("alt", `img_${i}`);
+    img.setAttribute("class", "gallery-item");
+
+    div_slike.appendChild(img);
+    document.querySelector("#galerija-slike").appendChild(div_slike);
+}
+
 // Sekcija CallToAction
 var ctaTekst = ["Napravi razliku. <br/> Sačuvaj živote.", "Postani volonter"];
 var sekcijaCTA = document.querySelector("#cta");
@@ -331,7 +386,7 @@ var contentCTA = `<div class="col-lg-5 col-12 ms-auto">
     </div>`;
 sekcijaCTA.innerHTML = contentCTA;
 
-// Dinamicki ispis Testemonijali
+// Dinamicki ispis testemonijala
 var testemonijali = document.querySelector("#testemonijali");
 
 var nizTestemNaslov = ["Toplo bih preporučila Udruženje Dobrog Srca svim organizacijama!", 
@@ -520,4 +575,3 @@ else {
 $(document).ready(function() {
     $(".rslides").responsiveSlides();
 });
-    
