@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://bogdanv44.github.io/dobrosrce/index.html</loc>
+        <lastmod>2022-24-1T17:58:38+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://bogdanv44.github.io/dobrosrce/author.html</loc>
+        <lastmod>2022-24-1T17:58:38+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>
