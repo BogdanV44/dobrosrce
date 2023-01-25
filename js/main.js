@@ -447,7 +447,7 @@ for (let i = 0; i < nizTestemImg.length; i++) {
 testemonijali.appendChild(ol);
 
 // Dinamicki ispis Brzi Linkovi
-var hrefBrziLinkovi = ["#", "#section_2", "#section_3", "#section_4", "autor.html",
+var hrefBrziLinkovi = ["#", "#section_2", "#section_3", "#section_4", "author.html",
 "assets/DOKUMENTACIJA_fajl.pdf", "xml/sitemap.xml"];
 var imeBrziLinkovi = ["Vrati se gore", "Naša priča", "Ciljevi", "Postani volonter", "Autor", "Dokumentacija", "Sitemap"];
 
