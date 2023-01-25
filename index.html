@@ -32,8 +32,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
         <header class="site-header">
             <div class="container">
-                <div class="row">
-                    
+                <div class="row">            
                     <div class="col-lg-8 col-12 d-flex flex-wrap">
                         <p class="d-flex me-4 mb-0">
                             <i class="bi-geo-alt me-2"></i>
@@ -76,7 +75,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                 </div>
             </div>
         </header>
-
+        
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
@@ -101,9 +100,19 @@ https://templatemo.com/tm-581-kind-heart-charity
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 col-12 p-0">
-                            <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                            <div class="carousel carousel-fade slide" id="hero-slide" data-bs-ride="carousel">
+                                <div class="carousel-inner" id="heroInner"></div>
+                                
+                                <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                    
+                                <button class="carousel-control-next" type="button" data-bs-target="#hero-slide" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
-                            
                         </div>
 
                     </div>
@@ -141,11 +150,12 @@ https://templatemo.com/tm-581-kind-heart-charity
 
             <section class="section-padding" id="section_3">
                 <div class="container">
-                    <div class="row" id="sekcijaCiljevi">
-                        <div class="col-lg-12 col-12 text-center mb-4">
-                            <h2>Naši Ciljevi</h2>
+                    <div class="row">
+                        <div class="row" id="sekcijaCiljevi">
+                            <div class="col-lg-12 col-12 text-center mb-4">
+                                <h2>Naši Ciljevi</h2>
+                            </div>
                         </div>
-                        
                     </div>
                 </div>
             </section>
@@ -160,16 +170,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <div class="col-12" id="kontaktForma">
                                 <h3>Postani volonter danas</h3>
                                 <form action="" class="mt-4">
-                                    <div class="row">
-                                        <div class="form-group col-lg-6 col-12">
-                                            <input type="text" id="tbImePrezime" class="form-control" placeholder="Ime i prezime" />
-                                            <p></p>
-                                        </div>
-
-                                        <div class="form-group col-lg-6 col-12">
-                                            <input type="text" id="tbEmail" class="form-control" placeholder="E-mail"/>
-                                            <p></p>
-                                        </div>
+                                    <div class="row" id="tekstualnaPolja">
                                     </div>
                                     
                                     <div>
@@ -183,20 +184,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         <p class="alert alert-danger ispisGresaka">Postignut maksimalni broj karaktera.</p>
                                     </div>
 
-                                    <div class="form-group">
-                                        <p class="fw-bold mb-0">Budite obavešteni o našem radu!</p>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="rbNewsletter" value="P" />
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                Prihvatam
-                                            </label>
-                                        </div>
-                                        <div class="form-check mb-2">
-                                            <input class="form-check-input" type="radio" name="rbNewsletter" value="N" />
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                Ne prihvatam
-                                            </label>
-                                        </div>
+                                    <div class="form-group" id="radioPolje">
                                         <p class="alert alert-danger ispisGresaka" id="poslednjiP">Jedno od polja mora biti selektovano.</p>
                                     </div>
 
@@ -232,56 +220,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                             
                                 <div id="testimonial-carousel" class="carousel carousel-fade rslides" data-bs-ride="carousel">
 
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                           <div class="carousel-caption">
-                                                <h4 class="carousel-title">Toplo bih preporučila Udruženje Dobrog Srca svim organizacijama!</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Marija</span>, Šef</small>
-                                           </div>
-                                        </div>
-
-                                        <div class="carousel-item">
-                                            <div class="carousel-caption">
-                                                <h4 class="carousel-title">Pokazali su neverovatnu sposobnost da pomognu u izgradnji svetlije i bolje budućnosti za našu zemlju.</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Nikola</span>, Partner</small>
-                                            </div>
-                                        </div>
-
-                                        <div class="carousel-item">
-                                            <div class="carousel-caption">
-                                                <h4 class="carousel-title">Član sam već 2 godine. Uvek je lep osećaj pomagati drugima kroz razne aktivnosti!</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Jana</span>, Član</small>
-                                            </div>
-                                        </div>
-
-                                        <div class="carousel-item">
-                                            <div class="carousel-caption">
-                                                <h4 class="carousel-title">Udruženje Dobrog Srca je bilo od velike pomoći za prvu fazu projekta seoske vode.</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Saša</span>, Partner</small>
-                                           </div>
-                                        </div>
-
-                                          <ol class="carousel-indicators">
-                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
-                                                    <img src="images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                               </li>
-
-                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
-                                                    <img src="images/avatar/portrait-young-redhead-bearded-male.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                               </li>
-
-                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
-                                                    <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                               </li>
-
-                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
-                                                    <img src="images/avatar/studio-portrait-emotional-happy-funny.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                               </li>
-                                          </ol>
+                                    <div class="carousel-inner" id="testemonijali">
+                                    
 
                                  </div>
                             </div>
@@ -345,21 +285,21 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 <li class="social-icon-item">
                                     <a href="https://twitter.com/" class="social-icon-link bi-twitter"></a>
                                 </li>
-
+    
                                 <li class="social-icon-item">
                                     <a href="https://www.facebook.com/" class="social-icon-link bi-facebook"></a>
                                 </li>
-
+    
                                 <li class="social-icon-item">
                                     <a href="https://www.instagram.com/" class="social-icon-link bi-instagram"></a>
                                 </li>
-
+    
                                 <li class="social-icon-item">
-                                    <a href="https://rs.linkedin.com/" class="social-icon-link bi-linkedin"></a>
+                                    <a href="https://www.youtube.com/" class="social-icon-link bi-youtube"></a>
                                 </li>
-
+    
                                 <li class="social-icon-item">
-                                    <a href="https://youtube.com" class="social-icon-link bi-youtube"></a>
+                                    <a href="https://www.whatsapp.com/" class="social-icon-link bi-whatsapp"></a>
                                 </li>
                             </ul>
                         </div>
