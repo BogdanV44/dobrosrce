@@ -150,4 +150,47 @@
     #dugmeSpecijalno {
         margin-top: 0;
     }
+    #cta div {
+        display: flex;
+        justify-content: center;
+    }
+    #co-founder-img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 770px) {
+    .row {
+        justify-content: center;
+    }
+    .site-footer .row div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .site-footer .row div img {
+        margin: 0px auto;
+    }
+    #brziLinkovi {
+        text-align: center;
+        justify-content: center;
+    }
+    #brziLinkovi ul {
+        display: flex;
+        flex-direction: column;
+    }
+    #brziLinkovi ul li a {
+        margin: 0px;
+    }
+    .site-footer .row:last-child p{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 430px) {
+    #sticky-wrapper .navbar .container {
+        justify-content: center;
+    }
+    #hero-slide .carousel-image {
+        object-position: left center;
+    }
 }
