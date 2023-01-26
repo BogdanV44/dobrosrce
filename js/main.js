@@ -571,15 +571,14 @@ document.querySelector("#poljeKomentar").addEventListener("keyup", function () {
 
 // jQUERY
 
-// Responzivnost predposlednjeg dugmeta menija putem jQuery-a 
-if ($(window).width() < 991) {
-    $("#dugmeSpecijalno").removeClass('ms-2');
-}
-else {
-    $("#dugmeSpecijalno").addClass('ms-2');
-}
-
-// Slajder testemonijala
 $(document).ready(function() {
+    // Responzivnost predposlednjeg dugmeta menija putem jQuery-a 
+    if ($(window).width() < 991) {
+        $("#dugmeSpecijalno").removeClass('ms-2');
+    }
+    else {
+        $("#dugmeSpecijalno").addClass('ms-2');
+    }
+    // Slajder testemonijala
     $(".rslides").responsiveSlides();
 });
