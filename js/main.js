@@ -200,7 +200,7 @@ var contentONama = `<div class="container">
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-12">
-                    <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
+                    <div class="custom-text-box d-flex justify-content-center flex-wrap d-lg-block mb-lg-0">
                         <div class="counter-thumb"> 
                             <div class="d-flex">
                                 <span class="counter-number" data-from="1" data-to="2009" data-speed="1000"></span>
@@ -237,7 +237,7 @@ var sekcijaCoFounder = document.querySelector("#coFounder");
 var contentCoFounder = `<div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-5 col-12">
-            <img src="images/portrait-volunteer-who-organized-donations-charity.jpg" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="">
+            <img src="images/portrait-volunteer-who-organized-donations-charity.jpg" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" id="co-founder-img" alt="co-founder" />
         </div>
 
         <div class="col-lg-5 col-md-7 col-12">
@@ -318,6 +318,7 @@ for (let i = 0; i < nizCiljeviNaslov.length; i++ ){
 }
 
 // Galerija
+var galerija = document.querySelector("#galerija-slike");
 var button = document.querySelector("#vidi-jos");
 const putanjaGalerija = "images/gallery/img";
 for (let i = 1; i < 4; i++) {
@@ -329,22 +330,24 @@ button.addEventListener("click", ucitajGaleriju);
 var vecProsiren = 0;
 var vecUcitaneSlike = 0; //da se nebi pravili novi HTTP requestovi
 function ucitajGaleriju() {
-    if (vecProsiren != 1 && vecUcitaneSlike != 1) {
+    if (vecUcitaneSlike == 0) {
         for (let i = 4; i < 10; i++) {
             kreirajElementeGalerije(i);
 
-            vecProsiren = 1;
+
             vecUcitaneSlike = 1;
             button.textContent = "Umanji";
         }
     }
-    else if (vecUcitaneSlike == 1 && vecProsiren == 0) {
+    else if (button.textContent == "Učitaj Još") {
         var nizUcitanihSlika = document.querySelectorAll(".gallery-item");
         nizUcitanihSlika.forEach(function (slika) {
-            slika.classList.remove("d-none");
-            slika.classList.add("col");
+            selektujParentElement(slika);
+            parentElement.classList.remove("d-none");
+            parentElement.classList.add("col");
         })
         
+        galerija.classList.add("gy-4");
         vecProsiren = 1;
         button.textContent = "Umanji";
     }
@@ -352,10 +355,12 @@ function ucitajGaleriju() {
         var nizUcitanihSlika = document.querySelectorAll(".gallery-item");
         // Da bi prve tri ostale vidljive
         for (let i = 3; i < nizUcitanihSlika.length; i++ ) {
-            nizUcitanihSlika[i].classList.add("d-none");
-            nizUcitanihSlika[i].parentElement.style.margin = "0";
+            selektujParentElement(nizUcitanihSlika[i]);
+            parentElement.classList.add("d-none");
+            parentElement.classList.remove("col");
         }
-
+        
+        galerija.classList.add("gy-4");
         vecProsiren = 0;
         button.textContent = "Učitaj Još";
     }
@@ -371,7 +376,10 @@ function kreirajElementeGalerije(i) {
     img.setAttribute("class", "gallery-item");
 
     div_slike.appendChild(img);
-    document.querySelector("#galerija-slike").appendChild(div_slike);
+    galerija.appendChild(div_slike);
+}
+function selektujParentElement(element) {
+    return parentElement = element.parentElement;
 }
 
 // Sekcija CallToAction
