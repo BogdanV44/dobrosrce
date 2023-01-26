@@ -157,6 +157,9 @@
     #co-founder-img {
         width: 100%;
     }
+    #autor img {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 770px) {
     .row {
@@ -184,6 +187,12 @@
     }
     .site-footer .row:last-child p{
         justify-content: center;
+    }
+}
+@media screen and (max-width:500px) {
+    #autor-nav-container {
+        justify-content: center;
+        padding: 10px;
     }
 }
 @media screen and (max-width: 430px) {
